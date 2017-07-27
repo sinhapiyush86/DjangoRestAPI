@@ -5,6 +5,7 @@ from .models import Temperature
 from .serializers import TemperatureSerializer
 from django.http import JsonResponse,HttpResponse
 from rest_framework.parsers import JSONParser
+from .serializers2 import TemperatureSerializer2
 
 # Create your views here.
 @csrf_exempt
@@ -18,7 +19,7 @@ def apimethod(request):
         return JsonResponse(serializer.errors, status=400)
     elif request.method =='GET':
         tempdata = Temperature.objects.all()
-        serialized_data = TemperatureSerializer(tempdata,many=True)
+        serialized_data = TemperatureSerializer2(tempdata,many=True)
         return JsonResponse({"key":serialized_data.data})
 
 
