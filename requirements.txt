@@ -1,6 +1,4 @@
 
-chardet==2.3.0
-Cython==0.25.2
 djangorestframework==3.6.3
 html5lib==0.999
 lxml==3.5.0
@@ -12,6 +10,4 @@ pygobject==3.20.0
 PyMySQL==0.7.11
 pystan==2.16.0.0
 python-apt==1.1.0b1
-scour==0.32
-six==1.10.0
 
