@@ -78,11 +78,11 @@ WSGI_APPLICATION = 'arddata.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'myproject',
-        'USER': 'myprojectuser',
-        'PASSWORD': 'password',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'dfjd0sf58m2r4l',
+        'USER': 'mcnhjkggjdlfmi',
+        'PASSWORD': 'ee18e94052aeef950055c1dd0827233ccfbad64fd3664d94a261c14f66e52b47',
+        'HOST': 'ec2-23-21-96-159.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
