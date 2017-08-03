@@ -21,5 +21,22 @@ def apimethod(request):
         tempdata = Temperature.objects.all()
         serialized_data = TemperatureSerializer2(tempdata,many=True)
         return JsonResponse({"key":serialized_data.data})
+@csrf_exempt
+def edit(request,id):
+    obj = Temperature(pk=id)
+    if request.method == 'PUT':
+        data = JSONParser().parse(request)
+
+        serializer = TemperatureSerializer(obj,data=data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return HttpResponse("Successfully updated")
+
+    if request.method == 'DELETE':
+        obj.delete()
+        return HttpResponse("succesfully deleted")
 
 
+    
+	

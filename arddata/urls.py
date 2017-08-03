@@ -19,5 +19,6 @@ from api import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^temperature',views.apimethod,name='temperature')
-]
+    url(r'^temperature/$',views.apimethod,name='temperature'),
+    url(r'^temperature/(?P<id>[0-9+])/$',views.edit,name='tempedit')
+    ]
